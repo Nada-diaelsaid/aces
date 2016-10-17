@@ -1,0 +1,9 @@
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\bin\Debug\AcesOfflineSystem.exe
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\bin\Debug\AcesOfflineSystem.pdb
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\obj\Debug\AcesOfflineSystem.csprojResolveAssemblyReference.cache
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\obj\Debug\AcesOfflineSystem.Form1.resources
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\obj\Debug\AcesOfflineSystem.Properties.Resources.resources
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\obj\Debug\AcesOfflineSystem.csproj.GenerateResource.Cache
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\obj\Debug\AcesOfflineSystem.exe
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\obj\Debug\AcesOfflineSystem.pdb
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\bin\Debug\AcesOfflineSystem.exe.config
