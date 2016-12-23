@@ -8,17 +8,26 @@ using System.Windows.Forms;
 using System.IO;
 using Microsoft.VisualBasic.FileIO;
 using System.Linq;
+using System.Threading;
 
 namespace AcesOfflineSystem
 {
     public partial class Form1 : Form
     {
+        public void startForm()
+        {
+            Application.Run(new Form2());
+        }
         Dictionary<string, string> map = new Dictionary<string, string>();
         List<string> templist = new List<string>();
         string mobile;
         public Form1()
         {
+            Thread t = new Thread(new ThreadStart(startForm));
+            t.Start();
+            Thread.Sleep(3000);
             InitializeComponent();
+            t.Abort();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -26,19 +35,20 @@ namespace AcesOfflineSystem
             if (warning.Visible == true) {
                 warning.Visible = false;
             }
-            mobile = textBox1.Text;
+            else if (textBox1.TextLength == 11)
+                mobile = textBox1.Text;
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-        (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
+        //private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        //{
+        //    if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+        //(e.KeyChar != '.'))
+        //    {
+        //        e.Handled = true;
+        //    }
 
-            
-        }
+
+        //}
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -46,11 +56,14 @@ namespace AcesOfflineSystem
             {
                 warning.Visible = true;
             }
-            else {
+            else if(textBox1.TextLength ==11) {
+                warning.Visible = false;
+                mobile = textBox1.Text;
                 string password = generateRandom(7);
                 //string pass = password.ToString();
                 addToDict(mobile, password);
-                
+                //empty the textbox after submitting
+                textBox1.Text = "";
                 
             }
         }
@@ -84,9 +97,11 @@ namespace AcesOfflineSystem
                     MessageBox.Show(ex.ToString(), "Error");
 
                 }
-                MessageBox.Show(password, "Your password");
+                //MessageBox.Show(password, "Your password");
+                label5.Visible = true;
+                label8.Visible = true;
                 label6.Text = mobile;
-
+                label9.Text = password;
                 CSV();
             }
             else
@@ -94,22 +109,32 @@ namespace AcesOfflineSystem
                 //mobile is the key
                 foreach (KeyValuePair<string, string> entry in map)
                     {
-                        if (map.ContainsKey(mobile))
+                    try
                         {
-                            //get password of the already entered mobile number
-                            var myValue = map.FirstOrDefault(x => x.Key == mobile).Value;
-                            MessageBox.Show("This mobile number has already registerd\n"+"Password is "+myValue, "Warning");
-                            return;
-                        }
+
+                            if (map.ContainsKey(mobile))
+                            {
+                                //get password of the already entered mobile number
+                                var myValue = map.FirstOrDefault(x => x.Key == mobile).Value;
+                                MessageBox.Show("This mobile number has already registerd\n"+"Password is "+myValue, "Warning");
+                                return;
+                            }
+                          }
+                    catch(Exception ex){
+                        MessageBox.Show(ex.ToString(), "Error");
+                    }
                         
                         ok = true;
                         //map.Add(mobile, password);
 
                         templist.Add(mobile);
                         templist.Add(password);
+                        label5.Visible = true;
+                        label8.Visible = true;
                         label6.Text = mobile;
-     
-                        MessageBox.Show(password, "Your password");
+                        label9.Text = password;
+                 
+                        //MessageBox.Show(password, "Your password");
                         break;
                         
                     }
@@ -204,16 +229,23 @@ namespace AcesOfflineSystem
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //readCSV();
+
+            readCSV();
         }
 
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                button1_Click(this, new EventArgs());
-            }
-        }
+        //private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    if (e.KeyCode == Keys.Enter)
+        //    {
+        //        if (textBox1.TextLength < 11) { }
+        //        else if (textBox1.TextLength == 11)
+        //        {
+        //            button1_Click(this, new EventArgs());
+        //        }
+
+               
+        //    }
+        //}
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -223,6 +255,25 @@ namespace AcesOfflineSystem
         private void button2_Click(object sender, EventArgs e)
         {
             readCSV();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(Char.IsNumber(e.KeyChar) || e.KeyChar == 8);
+
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1_Click(this, new EventArgs());
+            }
         }
     }
 }

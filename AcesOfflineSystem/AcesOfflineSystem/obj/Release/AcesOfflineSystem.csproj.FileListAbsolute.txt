@@ -1,0 +1,14 @@
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\bin\Release\AcesOfflineSystem.exe.config
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\obj\Release\AcesOfflineSystem.exe
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\obj\Release\AcesOfflineSystem.pdb
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\bin\Release\AcesOfflineSystem.exe.manifest
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\bin\Release\AcesOfflineSystem.application
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\bin\Release\AcesOfflineSystem.exe
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\bin\Release\AcesOfflineSystem.pdb
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\obj\Release\AcesOfflineSystem.csprojResolveAssemblyReference.cache
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\obj\Release\AcesOfflineSystem.Form1.resources
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\obj\Release\AcesOfflineSystem.Form2.resources
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\obj\Release\AcesOfflineSystem.Properties.Resources.resources
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\obj\Release\AcesOfflineSystem.csproj.GenerateResource.Cache
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\obj\Release\AcesOfflineSystem.exe.manifest
+E:\Aces\AcesOfflineSystem\AcesOfflineSystem\obj\Release\AcesOfflineSystem.application
