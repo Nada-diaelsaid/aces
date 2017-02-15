@@ -12,3 +12,17 @@ E:\Aces\AcesOfflineSystem\AcesOfflineSystem\obj\Release\AcesOfflineSystem.Proper
 E:\Aces\AcesOfflineSystem\AcesOfflineSystem\obj\Release\AcesOfflineSystem.csproj.GenerateResource.Cache
 E:\Aces\AcesOfflineSystem\AcesOfflineSystem\obj\Release\AcesOfflineSystem.exe.manifest
 E:\Aces\AcesOfflineSystem\AcesOfflineSystem\obj\Release\AcesOfflineSystem.application
+C:\Users\Nona\Documents\GitHub\aces\AcesOfflineSystem\AcesOfflineSystem\bin\Release\AcesOfflineSystem.exe.config
+C:\Users\Nona\Documents\GitHub\aces\AcesOfflineSystem\AcesOfflineSystem\obj\Release\AcesOfflineSystem.exe
+C:\Users\Nona\Documents\GitHub\aces\AcesOfflineSystem\AcesOfflineSystem\obj\Release\AcesOfflineSystem.pdb
+C:\Users\Nona\Documents\GitHub\aces\AcesOfflineSystem\AcesOfflineSystem\bin\Release\AcesOfflineSystem.exe.manifest
+C:\Users\Nona\Documents\GitHub\aces\AcesOfflineSystem\AcesOfflineSystem\bin\Release\AcesOfflineSystem.application
+C:\Users\Nona\Documents\GitHub\aces\AcesOfflineSystem\AcesOfflineSystem\bin\Release\AcesOfflineSystem.exe
+C:\Users\Nona\Documents\GitHub\aces\AcesOfflineSystem\AcesOfflineSystem\bin\Release\AcesOfflineSystem.pdb
+C:\Users\Nona\Documents\GitHub\aces\AcesOfflineSystem\AcesOfflineSystem\obj\Release\AcesOfflineSystem.csprojResolveAssemblyReference.cache
+C:\Users\Nona\Documents\GitHub\aces\AcesOfflineSystem\AcesOfflineSystem\obj\Release\AcesOfflineSystem.Form1.resources
+C:\Users\Nona\Documents\GitHub\aces\AcesOfflineSystem\AcesOfflineSystem\obj\Release\AcesOfflineSystem.Form2.resources
+C:\Users\Nona\Documents\GitHub\aces\AcesOfflineSystem\AcesOfflineSystem\obj\Release\AcesOfflineSystem.Properties.Resources.resources
+C:\Users\Nona\Documents\GitHub\aces\AcesOfflineSystem\AcesOfflineSystem\obj\Release\AcesOfflineSystem.csproj.GenerateResource.Cache
+C:\Users\Nona\Documents\GitHub\aces\AcesOfflineSystem\AcesOfflineSystem\obj\Release\AcesOfflineSystem.exe.manifest
+C:\Users\Nona\Documents\GitHub\aces\AcesOfflineSystem\AcesOfflineSystem\obj\Release\AcesOfflineSystem.application

@@ -43,7 +43,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.mobileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.emailToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -57,6 +62,7 @@
             this.label1.Size = new System.Drawing.Size(238, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Enter mobile number:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -210,6 +216,46 @@
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSplitButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(200, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(469, 25);
+            this.toolStrip1.TabIndex = 16;
+            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.MouseHover += new System.EventHandler(this.toolStrip1_MouseHover);
+            // 
+            // toolStripSplitButton1
+            // 
+            this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mobileToolStripMenuItem1,
+            this.emailToolStripMenuItem1});
+            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(134, 22);
+            this.toolStripSplitButton1.Text = "Choose textbox entry";
+            // 
+            // mobileToolStripMenuItem1
+            // 
+            this.mobileToolStripMenuItem1.Checked = true;
+            this.mobileToolStripMenuItem1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.mobileToolStripMenuItem1.Name = "mobileToolStripMenuItem1";
+            this.mobileToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.mobileToolStripMenuItem1.Text = "Mobile";
+            this.mobileToolStripMenuItem1.CheckedChanged += new System.EventHandler(this.mobileToolStripMenuItem1_CheckedChanged);
+            this.mobileToolStripMenuItem1.CheckStateChanged += new System.EventHandler(this.mobileToolStripMenuItem1_CheckStateChanged);
+            this.mobileToolStripMenuItem1.Click += new System.EventHandler(this.mobileToolStripMenuItem1_Click);
+            // 
+            // emailToolStripMenuItem1
+            // 
+            this.emailToolStripMenuItem1.Name = "emailToolStripMenuItem1";
+            this.emailToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.emailToolStripMenuItem1.Text = "Email";
+            this.emailToolStripMenuItem1.Click += new System.EventHandler(this.emailToolStripMenuItem1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -217,6 +263,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(669, 465);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -240,6 +287,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,6 +310,10 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
+        private System.Windows.Forms.ToolStripMenuItem mobileToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem emailToolStripMenuItem1;
     }
 }
 

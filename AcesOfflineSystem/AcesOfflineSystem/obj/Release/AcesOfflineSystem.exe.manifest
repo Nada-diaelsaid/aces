@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AcesOfflineSystem.exe" size="378368">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AcesOfflineSystem.exe" size="380928">
       <assemblyIdentity name="AcesOfflineSystem" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yF6Ptpe/4gNqqrh+X5uI4Z6YuNExGxGfVrrkU1hi/1A=</dsig:DigestValue>
+        <dsig:DigestValue>BfCRD2t05HlTVYK0u9VW/oIWSUIf3bXu02geqq+TT2A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

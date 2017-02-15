@@ -275,5 +275,65 @@ namespace AcesOfflineSystem
                 button1_Click(this, new EventArgs());
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void toolStripContainer1_TopToolStripPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mobileToolStripMenuItem1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mobileToolStripMenuItem1_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (mobileToolStripMenuItem1.Checked == true) {
+                label1.Text = "Enter Mobile Number";
+            }
+            else if (mobileToolStripMenuItem1.Checked == false) {
+                label1.Text = "Enter Email";
+            }
+        }
+
+        private void mobileToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            mobileToolStripMenuItem1.Checked = true;
+            emailToolStripMenuItem1.Checked = false;
+
+        }
+
+        private void emailToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            mobileToolStripMenuItem1.Checked = false;
+            emailToolStripMenuItem1.Checked = true;
+
+        }
+
+        private void toolStrip1_MouseHover(object sender, EventArgs e)
+        {
+            if (toolStrip1.Visible == true) {
+                toolStrip1.Visible = false;
+            }
+            else if (toolStrip1.Visible == false)
+            {
+                toolStrip1.Visible = true;
+            }
+        }
     }
 }
