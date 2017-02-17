@@ -356,15 +356,10 @@ namespace AcesOfflineSystem
 
         }
 
-        
-
-       
-
-       
-
         //private void toolStrip1_MouseHover(object sender, EventArgs e)
         //{
-        //    if (toolStrip1.Visible == true) {
+        //    if (toolStrip1.Visible == true)
+        //    {
         //        toolStrip1.Visible = false;
         //    }
         //    else if (toolStrip1.Visible == false)
