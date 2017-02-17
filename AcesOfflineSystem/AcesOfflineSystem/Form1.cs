@@ -9,6 +9,7 @@ using System.IO;
 using Microsoft.VisualBasic.FileIO;
 using System.Linq;
 using System.Threading;
+using System.Net.Mail;
 
 namespace AcesOfflineSystem
 {
@@ -52,19 +53,41 @@ namespace AcesOfflineSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.TextLength < 11)
+            if (mobileToolStripMenuItem1.Checked == true)
             {
-                warning.Visible = true;
+                if (textBox1.TextLength < 11)
+                {
+                    warning.Visible = true;
+                }
+                else if (textBox1.TextLength == 11)
+                {
+                    warning.Visible = false;
+                    mobile = textBox1.Text;
+                    string password = generateRandom(7);
+                    //string pass = password.ToString();
+                    addToDict(mobile, password);
+                    //empty the textbox after submitting
+                    textBox1.Text = "";
+
+                }
             }
-            else if(textBox1.TextLength ==11) {
-                warning.Visible = false;
-                mobile = textBox1.Text;
-                string password = generateRandom(7);
-                //string pass = password.ToString();
-                addToDict(mobile, password);
-                //empty the textbox after submitting
-                textBox1.Text = "";
-                
+            else if (emailToolStripMenuItem1.Checked == true) {
+                //check email regular expression 
+                try
+                {
+                    emailWarning.Visible = false;
+                    var eMailValidator = new System.Net.Mail.MailAddress(textBox2.Text);
+                    mobile = textBox2.Text;
+                    string password = generateRandom(7);
+                    //string pass = password.ToString();
+                    addToDict(mobile, password);
+                    //empty the textbox after submitting
+                    textBox2.Text = "";
+                }
+                catch (FormatException ex)
+                {
+                    emailWarning.Visible = true;
+                }
             }
         }
 
@@ -101,7 +124,10 @@ namespace AcesOfflineSystem
                 label5.Visible = true;
                 label8.Visible = true;
                 label6.Text = mobile;
+                label8.Location = new Point(label6.Right, label8.Top);
                 label9.Text = password;
+                label9.Location = new Point(label8.Right, label9.Top);
+               
                 CSV();
             }
             else
@@ -132,7 +158,9 @@ namespace AcesOfflineSystem
                         label5.Visible = true;
                         label8.Visible = true;
                         label6.Text = mobile;
+                        label8.Location = new Point(label6.Right, label8.Top);
                         label9.Text = password;
+                        label9.Location = new Point(label8.Right, label9.Top);
                  
                         //MessageBox.Show(password, "Your password");
                         break;
@@ -247,26 +275,21 @@ namespace AcesOfflineSystem
         //    }
         //}
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void button2_Click(object sender, EventArgs e)
         {
             readCSV();
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !(Char.IsNumber(e.KeyChar) || e.KeyChar == 8);
 
         }
+
+        
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -276,38 +299,21 @@ namespace AcesOfflineSystem
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+      
 
-        }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void toolStripContainer1_TopToolStripPanel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mobileToolStripMenuItem1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
+      
+        //Choose entry options whether email or mobile:
         private void mobileToolStripMenuItem1_CheckStateChanged(object sender, EventArgs e)
         {
             if (mobileToolStripMenuItem1.Checked == true) {
                 label1.Text = "Enter Mobile Number";
+                textBox2.Visible = false;
+                textBox1.Visible = true;
             }
             else if (mobileToolStripMenuItem1.Checked == false) {
                 label1.Text = "Enter Email";
+                textBox2.Visible = true;
+                textBox1.Visible = false;
             }
         }
 
@@ -325,15 +331,17 @@ namespace AcesOfflineSystem
 
         }
 
-        private void toolStrip1_MouseHover(object sender, EventArgs e)
-        {
-            if (toolStrip1.Visible == true) {
-                toolStrip1.Visible = false;
-            }
-            else if (toolStrip1.Visible == false)
-            {
-                toolStrip1.Visible = true;
-            }
-        }
+       
+
+        //private void toolStrip1_MouseHover(object sender, EventArgs e)
+        //{
+        //    if (toolStrip1.Visible == true) {
+        //        toolStrip1.Visible = false;
+        //    }
+        //    else if (toolStrip1.Visible == false)
+        //    {
+        //        toolStrip1.Visible = true;
+        //    }
+        //}
     }
 }

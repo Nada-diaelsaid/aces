@@ -47,6 +47,8 @@
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.mobileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.emailToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.emailWarning = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +64,6 @@
             this.label1.Size = new System.Drawing.Size(238, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Enter mobile number:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -192,7 +193,6 @@
             this.label8.TabIndex = 13;
             this.label8.Text = "is";
             this.label8.Visible = false;
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
@@ -225,7 +225,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(469, 25);
             this.toolStrip1.TabIndex = 16;
             this.toolStrip1.Text = "toolStrip1";
-            this.toolStrip1.MouseHover += new System.EventHandler(this.toolStrip1_MouseHover);
             // 
             // toolStripSplitButton1
             // 
@@ -243,18 +242,40 @@
             this.mobileToolStripMenuItem1.Checked = true;
             this.mobileToolStripMenuItem1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.mobileToolStripMenuItem1.Name = "mobileToolStripMenuItem1";
-            this.mobileToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.mobileToolStripMenuItem1.Size = new System.Drawing.Size(111, 22);
             this.mobileToolStripMenuItem1.Text = "Mobile";
-            this.mobileToolStripMenuItem1.CheckedChanged += new System.EventHandler(this.mobileToolStripMenuItem1_CheckedChanged);
             this.mobileToolStripMenuItem1.CheckStateChanged += new System.EventHandler(this.mobileToolStripMenuItem1_CheckStateChanged);
             this.mobileToolStripMenuItem1.Click += new System.EventHandler(this.mobileToolStripMenuItem1_Click);
             // 
             // emailToolStripMenuItem1
             // 
             this.emailToolStripMenuItem1.Name = "emailToolStripMenuItem1";
-            this.emailToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.emailToolStripMenuItem1.Size = new System.Drawing.Size(111, 22);
             this.emailToolStripMenuItem1.Text = "Email";
             this.emailToolStripMenuItem1.Click += new System.EventHandler(this.emailToolStripMenuItem1_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(222, 142);
+            this.textBox2.MaxLength = 100;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(139, 23);
+            this.textBox2.TabIndex = 17;
+            this.textBox2.Visible = false;
+            // 
+            // emailWarning
+            // 
+            this.emailWarning.AutoSize = true;
+            this.emailWarning.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailWarning.ForeColor = System.Drawing.Color.DarkRed;
+            this.emailWarning.Image = ((System.Drawing.Image)(resources.GetObject("emailWarning.Image")));
+            this.emailWarning.Location = new System.Drawing.Point(399, 153);
+            this.emailWarning.Name = "emailWarning";
+            this.emailWarning.Size = new System.Drawing.Size(92, 16);
+            this.emailWarning.TabIndex = 18;
+            this.emailWarning.Text = "Invalid Email!";
+            this.emailWarning.Visible = false;
             // 
             // Form1
             // 
@@ -263,6 +284,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(669, 465);
+            this.Controls.Add(this.emailWarning);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
@@ -314,6 +337,8 @@
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
         private System.Windows.Forms.ToolStripMenuItem mobileToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem emailToolStripMenuItem1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label emailWarning;
     }
 }
 
