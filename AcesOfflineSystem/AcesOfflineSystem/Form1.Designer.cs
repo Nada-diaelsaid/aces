@@ -85,7 +85,7 @@
             this.warning.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.warning.ForeColor = System.Drawing.Color.DarkRed;
             this.warning.Image = ((System.Drawing.Image)(resources.GetObject("warning.Image")));
-            this.warning.Location = new System.Drawing.Point(399, 153);
+            this.warning.Location = new System.Drawing.Point(399, 151);
             this.warning.Name = "warning";
             this.warning.Size = new System.Drawing.Size(258, 16);
             this.warning.TabIndex = 3;
@@ -271,11 +271,11 @@
             this.emailWarning.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailWarning.ForeColor = System.Drawing.Color.DarkRed;
             this.emailWarning.Image = ((System.Drawing.Image)(resources.GetObject("emailWarning.Image")));
-            this.emailWarning.Location = new System.Drawing.Point(399, 149);
+            this.emailWarning.Location = new System.Drawing.Point(399, 147);
             this.emailWarning.Name = "emailWarning";
-            this.emailWarning.Size = new System.Drawing.Size(92, 16);
+            this.emailWarning.Size = new System.Drawing.Size(150, 16);
             this.emailWarning.TabIndex = 18;
-            this.emailWarning.Text = "Invalid Email!";
+            this.emailWarning.Text = "Invalid Email Address!";
             this.emailWarning.Visible = false;
             // 
             // Form1
