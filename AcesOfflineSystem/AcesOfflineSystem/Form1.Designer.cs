@@ -263,6 +263,7 @@
             this.textBox2.Size = new System.Drawing.Size(139, 23);
             this.textBox2.TabIndex = 17;
             this.textBox2.Visible = false;
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             // 
             // emailWarning
             // 
@@ -270,7 +271,7 @@
             this.emailWarning.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailWarning.ForeColor = System.Drawing.Color.DarkRed;
             this.emailWarning.Image = ((System.Drawing.Image)(resources.GetObject("emailWarning.Image")));
-            this.emailWarning.Location = new System.Drawing.Point(399, 153);
+            this.emailWarning.Location = new System.Drawing.Point(399, 149);
             this.emailWarning.Name = "emailWarning";
             this.emailWarning.Size = new System.Drawing.Size(92, 16);
             this.emailWarning.TabIndex = 18;

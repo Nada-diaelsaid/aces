@@ -55,6 +55,8 @@ namespace AcesOfflineSystem
         {
             if (mobileToolStripMenuItem1.Checked == true)
             {
+                //make email warning unvisible in case it is not
+                emailWarning.Visible = false;
                 if (textBox1.TextLength < 11)
                 {
                     warning.Visible = true;
@@ -72,11 +74,22 @@ namespace AcesOfflineSystem
                 }
             }
             else if (emailToolStripMenuItem1.Checked == true) {
+                //make mobile warning unvisible in case it is not
+                warning.Visible = false;
                 //check email regular expression 
                 try
                 {
                     emailWarning.Visible = false;
-                    var eMailValidator = new System.Net.Mail.MailAddress(textBox2.Text);
+                    //the following try catch handle empty email address in order not to crash
+                    try
+                    {
+                        var eMailValidator = new System.Net.Mail.MailAddress(textBox2.Text);
+                    }
+                    catch (Exception ex) {
+                        emailWarning.Visible = true;
+                        //invalid mail(empty) so terminate
+                        return;
+                    }
                     mobile = textBox2.Text;
                     string password = generateRandom(7);
                     //string pass = password.ToString();
@@ -290,7 +303,7 @@ namespace AcesOfflineSystem
         }
 
         
-
+        //keydown to make enter press event or button 1
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -298,20 +311,32 @@ namespace AcesOfflineSystem
                 button1_Click(this, new EventArgs());
             }
         }
-
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1_Click(this, new EventArgs());
+            }
+        }
       
 
       
         //Choose entry options whether email or mobile:
         private void mobileToolStripMenuItem1_CheckStateChanged(object sender, EventArgs e)
         {
+
             if (mobileToolStripMenuItem1.Checked == true) {
+                //make email warning unvisible in case it is not
+                emailWarning.Visible = false;
                 label1.Text = "Enter Mobile Number";
                 textBox2.Visible = false;
                 textBox1.Visible = true;
             }
+
             else if (mobileToolStripMenuItem1.Checked == false) {
-                label1.Text = "Enter Email";
+                //make mobile warning unvisible in case it is not
+                warning.Visible = false;
+                label1.Text = "Enter Email Address";
                 textBox2.Visible = true;
                 textBox1.Visible = false;
             }
@@ -330,6 +355,10 @@ namespace AcesOfflineSystem
             emailToolStripMenuItem1.Checked = true;
 
         }
+
+        
+
+       
 
        
 
